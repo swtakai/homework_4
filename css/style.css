@@ -125,7 +125,7 @@ header p{
 .about-image, .method-image, .clients-image, .contact-image{
   grid-column: 1/-1;
   max-height: 700px;
-  max-width: 100%;
+  overflow:hidden;
 
 
 }
@@ -170,18 +170,15 @@ background-color: rgba(255, 255, 255, .8);
   }
 
   .container{
-    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 400px 400px 400px 400px 400px;
   }
 
   .about, .clients, .method-image, .contact-image{
-    display: grid;
     grid-column: 3/span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
-    display: grid;
     grid-column: 2/span 2;
   }
 }
