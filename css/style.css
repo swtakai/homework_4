@@ -34,6 +34,12 @@ nav a{
 }
 
 /*Your Code Here*/
+a:link{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
 /*Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
 
@@ -46,14 +52,22 @@ links in the navigation are in the hover or focus state.*/
   transition: top 1s ease-out;
   z-index: 1;
 
-  /*Your code here*/
+  position: absolute;
+  top: -40px;
 }
 
-/*Your Code Here*/
+
 /*Write selector/rule property to position the skip class element*/
 
-/*Your Code Here*/
+.skip a:focus{
+  position: absolute;
+  top: 0px;
+}
+
 /*Write selector/rule property to style all elements when in focus*/
+:focus{
+  border: 2px solid;
+}
 
 
 nav{
@@ -73,7 +87,10 @@ footer{
 
 
 .container{
-  /*Your Code Here*/
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap: 15px;
 }
 
 header{
@@ -84,7 +101,8 @@ header{
   color: white;
   height: 400px;                /* Parallax effect */
 
-  /*Your Code Here*/
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
   /*Set background-image to header.jpg */
  
 
@@ -100,34 +118,43 @@ header p{
 }
 
 .about, .method, .clients, .contact{
-  /*Your Code Here*/
+  display: grid;
+  grid-column: 2/span 1;
 
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-  /*Your Code Here*/
+  display: grid;
+  grid-column: 1/-1;
+  max-height: 700px;
+  max-width: 100%;
+
 
 }
 
 .about, .about-image{
-   /*Your Code Here*/
+  display: grid;
+  grid-row: 2/span 1;
 
 }
 
 .method, .method-image{
-   /*Your Code Here*/
+  display: grid;
+  grid-row: 3/span 1;
 
 }
 
 
 .clients, .clients-image{
-    /*Your Code Here*/
+  display: grid;
+  grid-row: 4/span 1;
 
 }
 
 
 .contact, .contact-image{
-    /*Your Code Here*/
+  display: grid;
+  grid-row: 5/span 1;
 
 }
 
@@ -135,27 +162,33 @@ header p{
 background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  /*Your code here:*/
+  margin: auto;
 
 }
 
 
 @media all and (min-width: 800px){
   nav{
+    display: grid;
     padding: 30px 0px;
-    /*Your code here:*/
+    text-align: right;
+    vertical-align: middle;
   }
 
   .container{
-    /*Your code here:*/
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 400px 400px 400px 400px;
   }
 
   .about, .clients, .method-image, .contact-image{
-    /*Your code here:*/
+    display: grid;
+    grid-column: 3/span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
-    /*Your code here:*/
+    display: grid;
+    grid-column: 2/span 2;
   }
 }
 
